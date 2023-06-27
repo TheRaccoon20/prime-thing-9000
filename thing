@@ -1,0 +1,21 @@
+print("by the way, sometimes the numbers get VERY big.You have been warned.Do not put a lot of digits otherwise the whole thing will break down")
+oldnum=int(input("enter a number and the power of python will see if it is prime:"))
+startdivnum=2
+divnum=0
+num=oldnum
+if oldnum<0:
+    num=-oldnum
+else:
+    pass
+for i in range(num):
+    if num%startdivnum>0:
+        startdivnum=startdivnum+1
+    if num%startdivnum==0 and not startdivnum==num:
+        print("number is divisible by:",startdivnum)
+        divnum=divnum+1
+        startdivnum=startdivnum+1
+if divnum==0:
+    print("prime")
+else:
+    print("composite")
+    print(str(divnum+2)," factors")
